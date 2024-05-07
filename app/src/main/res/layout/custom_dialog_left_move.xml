@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:background="@android:color/transparent"
+        >
+
+
+        <com.gifviewer.GifViewer
+            android:scaleType="fitXY"
+            android:id="@+id/ivGif"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            app:srcGif="@raw/left"
+             />
+    </LinearLayout>
+</layout>

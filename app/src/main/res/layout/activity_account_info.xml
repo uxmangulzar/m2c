@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.fenris.motion2coach.viewmodel.AuthViewModel" />
+
+        </data>
+<ScrollView
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".view.activity.terms.TermsActivity">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal"
+                android:background="@color/color_blue"
+                >
+
+                <ImageView
+                    android:onClick="onBackPressed"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:layout_width="wrap_content"
+                    app:tint="@color/white"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:textSize="@dimen/_15ssp"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textColor="@color/white"
+                    android:text="@string/account_information"
+                    />
+
+
+            </LinearLayout>
+            <ImageView
+                android:layout_gravity="start|bottom"
+                android:src="@drawable/step_three_line"
+                android:layout_width="wrap_content"
+                app:tint="@color/white"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:orientation="vertical">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:hint="@string/email"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintTextColor="@android:color/darker_gray">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_border_selector"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="@={viewModel.email}"
+                    android:inputType="textEmailAddress"
+                    android:fontFamily="@font/opensans_regular"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:hint="@string/enter_password"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconTint="@android:color/darker_gray"
+                app:passwordToggleTint="@android:color/darker_gray"
+                app:endIconMode="password_toggle"
+                app:endIconDrawable="@drawable/custom_password_eye">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="@={viewModel.password}"
+
+                    android:background="@drawable/et_border_selector"
+                    android:fontFamily="@font/opensans_regular"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_marginTop="@dimen/_6sdp"
+                android:id="@+id/tv_check_character"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/opensans_medium"
+                android:orientation="vertical"
+                android:text="@string/contains_at_least_6_characters"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_9ssp" />
+
+            <TextView
+                android:id="@+id/tv_check_alpha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/opensans_medium"
+                android:orientation="vertical"
+                android:text="@string/contains_both_lower_a_z_and_upper_case_letters_a_z"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_9ssp" />
+
+            <TextView
+                android:id="@+id/tv_check_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/opensans_medium"
+                android:orientation="vertical"
+                android:text="@string/contains_at_least_one_number_0_9_or_a_symbol"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_9ssp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:hint="@string/re_password"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconTint="@android:color/darker_gray"
+                app:passwordToggleTint="@android:color/darker_gray"
+                app:endIconMode="password_toggle"
+                app:endIconDrawable="@drawable/custom_password_eye">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="@={viewModel.confirmPassword}"
+
+                    android:background="@drawable/et_border_selector"
+                    android:fontFamily="@font/opensans_regular"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/next"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_13ssp"
+                    android:enabled="false"
+                    android:background="@drawable/ic_rectangle_button"
+                    android:fontFamily="@font/opensans_bold"
+                    android:text="@string/next"/>
+            <TextView
+                android:id="@+id/tv_terms"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/opensans_medium"
+
+                android:text="@string/terms_register"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
+</layout>

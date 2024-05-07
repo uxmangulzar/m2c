@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.history.SessionsActivity"
+    android:padding="@dimen/_10sdp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:onClick="onBackPressed"
+            android:layout_gravity="end"
+            android:src="@drawable/cross"
+            app:tint="@color/black"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"/>
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:fontFamily="@font/opensans_medium"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="@color/black"
+                android:text="Select City"
+                />
+
+
+        </LinearLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_search"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:textSize="@dimen/_10ssp"
+            android:hint="Search City"
+            android:background="@drawable/rectangle_gray_shade"
+            android:fontFamily="@font/opensans_medium"
+            android:drawableRight="@drawable/ic_search"
+            android:drawablePadding="@dimen/_20sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingStart="@dimen/_10sdp"
+            />
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

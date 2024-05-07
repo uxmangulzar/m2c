@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_vector_menu"
+            android:title="Dashboard"
+            app:itemTextAppearance="@style/menu_text_style"
+            android:iconTint="#006AB3"
+            app:actionLayout="@layout/layout_session_icon"
+            />
+
+
+
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group_label_striker">
+    <item
+        android:id="@+id/nav_label_striker"
+        android:title="Strikers"
+        app:actionLayout="@layout/layout_session_icon_dropdown"
+        android:icon="@drawable/vector_coaches"
+        android:iconTint="#006AB3"
+        >
+    </item>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/groupStrikers">
+
+                <item
+                    android:id="@+id/nav_all_striker"
+                    android:title="                 All Strikers"
+                    app:actionLayout="@layout/layout_session_icon"
+                    />
+                <item
+                    android:id="@+id/nav_connect_striker"
+                    android:title="                 Connect with Striker"
+                    app:actionLayout="@layout/layout_session_icon"
+                    />
+                <item
+                    android:id="@+id/nav_invite"
+                    android:title="                 Invite"
+                    app:actionLayout="@layout/layout_session_icon"
+                    />
+
+
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group_label_coaches">
+        <item
+            android:id="@+id/nav_label_coach"
+            android:title="Coaches"
+            app:actionLayout="@layout/layout_session_icon"
+            android:icon="@drawable/vector_coaches"
+            android:iconTint="#006AB3"
+            >
+        </item>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/groupCoaches">
+
+                <item
+                    android:id="@+id/nav_all_coaches"
+                    android:title="                 All Coaches"
+                    app:actionLayout="@layout/layout_session_icon"
+                    />
+                <item
+                    android:id="@+id/nav_connect_coach"
+                    android:title="                 Connect with Coach"
+                    app:actionLayout="@layout/layout_session_icon"
+                    />
+
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group_label_guest">
+        <item
+            android:id="@+id/nav_label_guest"
+            android:title="Coaches"
+            app:actionLayout="@layout/layout_session_icon"
+            android:icon="@drawable/vector_coaches"
+            android:iconTint="#006AB3"
+            >
+        </item>
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/groupGuest">
+
+                <item
+                    android:id="@+id/nav_all_coaches_guest"
+                    android:title="                 All Coaches"
+                    app:actionLayout="@layout/layout_session_icon"
+                    />
+
+
+
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group4">
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_white_24dp"
+            android:title="Settings"
+            android:iconTint="#006AB3"
+            app:actionLayout="@layout/layout_session_icon"
+            />
+
+    </group>
+
+</menu>

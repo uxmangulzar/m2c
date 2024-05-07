@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/acx"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp"
+        >
+        <ImageView
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start"
+                android:fontFamily="@font/opensans_bold"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:text="How will you be recording your swing?"
+                />
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="start"
+            android:fontFamily="@font/opensans_medium"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:text="What is your player type?"
+            />
+        <RadioGroup
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="3">
+            <RadioButton
+                android:checked="true"
+                android:layout_weight="1.5"
+                android:id="@+id/radio_left"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                style="@style/Radiotheme"
+                android:textColor="@color/playertype_text"
+                android:background="@drawable/player_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="center"
+                android:text="Left Hand"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_10ssp"
+                />
+            <RadioButton
+                android:layout_weight="1.5"
+                android:id="@+id/radio_right"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/player_selector"
+                android:button="@android:color/transparent"
+                style="@style/Radiotheme"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="center"
+                android:text="Right Hand"
+                android:textAllCaps="false"
+                android:textColor="@color/playertype_text"
+                android:textSize="@dimen/_10ssp"
+
+                />
+
+
+
+
+        </RadioGroup>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="start"
+            android:fontFamily="@font/opensans_medium"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:text="Select Swing Recording Type"
+            />
+        <FrameLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/li_gocam"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2.1">
+                <androidx.cardview.widget.CardView
+                    android:alpha="0.7"
+                    android:id="@+id/down_line"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    app:cardCornerRadius="@dimen/_4sdp"
+                    android:layout_height="wrap_content"
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:scaleType="fitXY"
+                                android:src="@drawable/down_line"
+                                android:layout_width="@dimen/_135sdp"
+                                android:layout_height="@dimen/_180sdp"/>
+                            <TextView
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_gravity="top|end"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_12sdp"
+                                android:text="Soon"
+                                android:fontFamily="@font/opensans_bold"
+                                android:textColor="@color/color_blue"
+                                android:src="@drawable/group_overlay_lock"/>
+                        </FrameLayout>
+
+                        <TextView
+                            android:backgroundTint="@color/color_blue"
+                            android:id="@+id/btn_orient_one"
+                            android:background="@drawable/rect_session"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10ssp"
+                            android:fontFamily="@font/opensans_medium"
+                            android:text=""
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.legacy.widget.Space
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/face_on"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    app:cardCornerRadius="@dimen/_4sdp"
+                    android:layout_height="wrap_content"
+                    >
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:src="@drawable/face_on"
+                            android:layout_width="@dimen/_135sdp"
+                            android:layout_height="@dimen/_180sdp"/>
+                        <TextView
+                            android:backgroundTint="@color/color_blue"
+                            android:id="@+id/btn_orient_two"
+                            android:background="@drawable/rect_session"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10ssp"
+                            android:fontFamily="@font/opensans_medium"
+                            android:text=""
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/opensans_bold"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            android:text="Enter your weight?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_weight="2"
+                android:hint="@string/enter_your_weight"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintTextColor="@android:color/darker_gray">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_border_selector"
+                    android:fontFamily="@font/opensans_regular"
+                    android:inputType="numberDecimal"
+
+                    android:textSize="@dimen/_13ssp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_weight="1"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconMode="dropdown_menu"
+                app:endIconTint="@android:color/darker_gray">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinWeightUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_border_selector"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/unit"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:text="Kg's"
+                    android:textSize="@dimen/_10ssp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_bold"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            android:text="Enter your height?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_weight="2"
+                android:hint="@string/enter_your_height"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintTextColor="@android:color/darker_gray">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_border_selector"
+                    android:fontFamily="@font/opensans_regular"
+                    android:inputType="numberDecimal"
+
+                    android:textSize="@dimen/_13ssp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_weight="1"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconMode="dropdown_menu"
+                app:endIconTint="@android:color/darker_gray">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinHeightUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_border_selector"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/unit"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:text="cm"
+                    android:textSize="@dimen/_10ssp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="gone"
+            android:id="@+id/card_striker"
+            android:layout_alignParentBottom="true"
+            app:strokeColor="@color/color_blue"
+            app:strokeWidth="@dimen/_1sdp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/lin_main"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:padding="@dimen/_5sdp"
+
+                >
+
+                <FrameLayout
+                    android:id="@+id/main_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="5"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_striker_back"
+                            android:layout_weight="0.2"
+                            android:layout_width="0dp"
+                            android:layout_gravity="top"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/group_back"/>
+                        <FrameLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/iv_striker"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/elipse_avatar"/>
+
+                        </FrameLayout>
+                        <LinearLayout
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_weight="2.8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="start"
+                                android:maxLines="1"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textSize="@dimen/_12ssp"
+                                android:gravity="start"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/opensans_bold"
+                                android:text="Wylder Gian"
+                                />
+                            <TextView
+                                android:id="@+id/tv_type"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="start"
+                                android:textSize="@dimen/_14ssp"
+                                android:gravity="start"
+                                android:fontFamily="@font/opensans_medium"
+                                android:text="Right Handed"
+                                />
+                        </LinearLayout>
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/label_striker"/>
+
+
+
+
+                    </LinearLayout>
+                </FrameLayout>
+
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+</layout>

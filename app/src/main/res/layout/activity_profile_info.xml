@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.fenris.motion2coach.viewmodel.AuthViewModel" />
+
+        <variable
+            name="handler"
+            type="com.fenris.motion2coach.interfaces.SignupValidationHandler" />
+
+        <import type="android.text.TextUtils" />
+
+    </data>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".view.activity.terms.TermsActivity">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@color/color_blue"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:onClick="onBackPressed"
+                        android:src="@drawable/ic_baseline_arrow_back_24"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/opensans_bold"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:text="Profile Information"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15ssp" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|bottom"
+                    android:src="@drawable/step_one_line"
+                    app:tint="@color/white" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/let_s_start_by_creating_your_account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:hint="@string/first_name"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/first"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_border_selector"
+                        android:fontFamily="@font/opensans_regular"
+                        android:inputType="textPersonName"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:text="@={viewModel.firstName}"
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="@string/last_name"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/last"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_border_selector"
+                        android:fontFamily="@font/opensans_regular"
+                        android:inputType="textPersonName"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+                        android:text="@={viewModel.lastName}"
+
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="@string/dob"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_border_selector"
+                        android:fontFamily="@font/opensans_regular"
+
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:endIconMode="dropdown_menu"
+                    app:endIconTint="@android:color/darker_gray">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_border_selector"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/gender"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:textSize="@dimen/_13ssp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:endIconMode="dropdown_menu"
+                    app:endIconTint="@android:color/darker_gray">
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinRole"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_border_selector"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/role"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@={viewModel.role}"
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:endIconMode="dropdown_menu"
+                    app:endIconTint="@android:color/darker_gray">
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spinHand"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_border_selector"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/hand"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@={viewModel.hand}"
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/next"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:background="@drawable/ic_rectangle_button"
+                    android:enabled="false"
+                    android:fontFamily="@font/opensans_bold"
+                    android:onClick="@{()->handler.onValidationClicked()}"
+                    android:text="@string/next"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_13ssp" />
+
+                <TextView
+                    android:id="@+id/tv_terms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:fontFamily="@font/opensans_medium"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:text="@string/terms_register"
+
+                    android:textSize="@dimen/_10ssp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</layout>

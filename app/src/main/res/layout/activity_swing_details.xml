@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        tools:context=".view.activity.ActionPreviewActivity">
+        <LinearLayout
+            android:padding="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start"
+                android:fontFamily="@font/opensans_bold"
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:text="@string/swing"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/camera"
+                android:background="@drawable/blue_rect_small"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_40sdp"/>
+            <ImageView
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/skull"
+                android:background="@drawable/blue_rect_small"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_40sdp"/>
+            <ImageView
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/man_golf"
+                android:background="@drawable/blue_rect_small"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_40sdp"/>
+
+        </LinearLayout>
+        <ImageView
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/rect_white"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:src="@drawable/golf_three_d"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"/>
+        <TextView
+            android:layout_marginTop="@dimen/_70sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center|bottom"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/opensans_bold"
+            android:textColor="@color/black"
+            android:text="Quick Insights"
+            />
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:textSize="@dimen/_10ssp"
+
+                android:fontFamily="@font/opensans_medium"
+                android:textColor="@color/black"
+                android:text="Tempo: "
+                />
+            <TextView
+                android:textSize="@dimen/_10ssp"
+
+                android:fontFamily="@font/opensans_bold"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purple_500"
+                android:text="3:1 Sec"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/opensans_medium"
+            android:textColor="@color/black"
+            android:text="Club Head Speed"
+            />
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:textSize="@dimen/_10ssp"
+
+                android:fontFamily="@font/opensans_medium"
+                android:textColor="@color/black"
+                android:text="Thorax Turn / Tilt / Bend: "
+                />
+            <TextView
+                android:textSize="@dimen/_10ssp"
+
+                android:fontFamily="@font/opensans_bold"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purple_500"
+                android:text="95 / 7 / 15 deg"/>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:textSize="@dimen/_10ssp"
+
+                android:fontFamily="@font/opensans_medium"
+                android:textColor="@color/black"
+                android:text="Pelvis Turn / Tilt / Bend: "
+                />
+            <TextView
+                android:textSize="@dimen/_10ssp"
+
+                android:fontFamily="@font/opensans_bold"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purple_500"
+                android:text="95 / 7 / 15 deg"/>
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:visibility="invisible"
+            android:id="@+id/kinematic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:background="@drawable/ic_rectangle_button"
+            android:fontFamily="@font/opensans_bold"
+            android:text="Kinematic Details"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_13ssp" />
+    </LinearLayout>
+</ScrollView>

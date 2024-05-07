@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.fenris.motion2coach.viewmodel.UserProfileViewModel" />
+
+        <variable
+            name="handler"
+            type="com.fenris.motion2coach.interfaces.SignupValidationHandler" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_color">
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/logo" />
+            <LinearLayout
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:onClick="onBackPressed"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center|start"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/black"
+                    android:text="Edit Profile"
+                    />
+
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_gravity="center"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_profile"
+                    android:padding="@dimen/_2sdp"
+                    android:background="@drawable/ic_circle"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    />
+                <ImageView
+                    android:id="@+id/iv_camera"
+
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_gravity="bottom|end"
+                    android:src="@drawable/group_cam"
+                  />
+
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+
+                android:background="@drawable/rect_white"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:hint="First Name"
+                    app:startIconDrawable="@drawable/group_first"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/rect_white"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="@={viewModel.first}"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/iv_edit_first"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_edit_button"
+                    android:fontFamily="@font/opensans_medium"
+                    android:gravity="start"
+                    android:textColor="@color/color_blue"
+                    android:orientation="vertical"
+                    android:text="Edit"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+
+                android:background="@drawable/rect_white"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:hint="Last Name"
+                    app:startIconDrawable="@drawable/group_first"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_last"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/rect_white"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="@={viewModel.last}"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/iv_edit_last"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_edit_button"
+                    android:fontFamily="@font/opensans_medium"
+                    android:gravity="start"
+                    android:textColor="@color/color_blue"
+                    android:orientation="vertical"
+                    android:text="Edit"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+
+                android:background="@drawable/rect_white"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:hint="Phone number"
+                    app:startIconDrawable="@drawable/ic_baseline_phone_24"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="phone"
+                        android:maxLength="15"
+                        android:background="@drawable/rect_white"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/iv_edit_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_edit_button"
+                    android:fontFamily="@font/opensans_medium"
+                    android:gravity="start"
+                    android:textColor="@color/color_blue"
+                    android:orientation="vertical"
+                    android:text="Edit"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:gravity="center"
+
+                android:background="@drawable/rect_white"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:hint="Email"
+                    app:startIconDrawable="@drawable/message"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rect_white"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="@={viewModel.email}"
+                        android:inputType="textEmailAddress"
+                        android:enabled="false"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/_10ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/tv_edit_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+
+                    android:fontFamily="@font/opensans_medium"
+                    android:gravity="start"
+                    android:textColor="@color/color_blue"
+                    android:orientation="vertical"
+                    android:text="Edit"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:gravity="center"
+
+                android:background="@drawable/rect_white"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:hint="Role"
+                    app:startIconDrawable="@drawable/group_role"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_role"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rect_white"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="@={viewModel.role}"
+                        android:enabled="false"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/tv_edit_role"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+
+                    android:fontFamily="@font/opensans_medium"
+                    android:gravity="start"
+                    android:textColor="@color/color_blue"
+                    android:orientation="vertical"
+                    android:text="Edit"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:gravity="center"
+
+                android:background="@drawable/rect_white"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:hint="Handedness"
+                    app:startIconDrawable="@drawable/vector_hand"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_hand"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rect_white"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="@={viewModel.hand}"
+                        android:enabled="false"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/tv_edit_hand"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+
+                    android:fontFamily="@font/opensans_medium"
+                    android:gravity="start"
+                    android:textColor="@color/color_blue"
+                    android:orientation="vertical"
+                    android:text="Edit"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/rect_white"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:hint="Street"
+                    app:startIconDrawable="@drawable/vector_street"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:background="@drawable/rect_white"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="@dimen/_11ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:visibility="invisible"
+
+                    android:id="@+id/iv_edit_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_edit_button"
+
+                    android:fontFamily="@font/opensans_medium"
+                    android:gravity="start"
+                    android:textColor="@color/color_blue"
+                    android:orientation="vertical"
+                    android:text="Edit"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/rect_white"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:hint="House Number"
+                    app:startIconDrawable="@drawable/group_house"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_house"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:background="@drawable/rect_white"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:visibility="invisible"
+
+                    android:id="@+id/iv_edit_house"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_edit_button"
+
+                    android:fontFamily="@font/opensans_medium"
+                    android:gravity="start"
+                    android:textColor="@color/color_blue"
+                    android:orientation="vertical"
+                    android:text="Edit"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/rect_white"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:hint="Zip Code"
+                    app:startIconDrawable="@drawable/vector_zip"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_zip"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:background="@drawable/rect_white"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:visibility="invisible"
+
+                    android:id="@+id/iv_edit_zip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_edit_button"
+
+                    android:fontFamily="@font/opensans_medium"
+                    android:gravity="start"
+                    android:textColor="@color/color_blue"
+                    android:orientation="vertical"
+                    android:text="Edit"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/rect_white"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:hint="Country"
+                    app:startIconDrawable="@drawable/group_flag"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:background="@drawable/rect_white"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:visibility="invisible"
+
+                    android:id="@+id/iv_edit_country"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_edit_button"
+
+                    android:fontFamily="@font/opensans_medium"
+                    android:gravity="start"
+                    android:textColor="@color/color_blue"
+                    android:orientation="vertical"
+                    android:text="Edit"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/rect_white"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:hint="City"
+                    app:startIconDrawable="@drawable/group_city"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rect_white"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textColor="@android:color/black"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:visibility="invisible"
+
+                    android:id="@+id/iv_edit_city"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_edit_button"
+
+                    android:fontFamily="@font/opensans_medium"
+                    android:gravity="start"
+                    android:textColor="@color/color_blue"
+                    android:orientation="vertical"
+                    android:text="Edit"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/rect_white"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:hint="Weight"
+                    app:startIconDrawable="@drawable/weightscale"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="numberDecimal"
+
+                        android:background="@drawable/rect_white"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="@={viewModel.weight}"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:visibility="invisible"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_edit_button"
+
+                    android:fontFamily="@font/opensans_medium"
+                    android:gravity="start"
+                    android:textColor="@color/color_blue"
+                    android:orientation="vertical"
+                    android:text="Edit"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/rect_white"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:hint="Height"
+                    app:startIconDrawable="@drawable/height"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_height"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="numberDecimal"
+
+                        android:background="@drawable/rect_white"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="@={viewModel.height}"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="@dimen/_13ssp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:visibility="invisible"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_edit_button"
+
+                    android:fontFamily="@font/opensans_medium"
+                    android:gravity="start"
+                    android:textColor="@color/color_blue"
+                    android:orientation="vertical"
+                    android:text="Edit"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_update"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:background="@drawable/ic_rectangle_button"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Update"
+                android:onClick="@{()->handler.onValidationClicked()}"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_13ssp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</layout>

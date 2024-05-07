@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <RelativeLayout
+        android:id="@+id/framely"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_color">
+
+        <LinearLayout
+            android:id="@+id/ln_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical"
+            tools:context=".view.activity.LandingActivity">
+
+            <ImageView
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/logo" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_gravity="end|center"
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/opensans_bold"
+                    android:gravity="start|center"
+                    android:orientation="vertical"
+                    android:text="Capture"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15ssp" />
+
+
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_13sdp"
+                android:layout_marginRight="@dimen/_13sdp">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+                    <FrameLayout
+                        android:id="@+id/frame_full_swing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/capture_selector"
+                        >
+                        <ImageView
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_gravity="start|center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/group_full_swing"/>
+                        <Button
+                            android:layout_gravity="center"
+                            android:drawableTint="@color/button_text"
+                            android:id="@+id/btn_full_swing"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:background="@drawable/capture_selector"
+                            android:textColor="@color/color_blue"
+                            android:button="@android:color/transparent"
+                            android:fontFamily="@font/opensans_bold"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:text="Full Swing"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_10ssp"
+                            app:backgroundTint="@null" />
+                    </FrameLayout>
+                    <FrameLayout
+                        android:id="@+id/frame_short_game"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/capture_selector"
+                        >
+                        <ImageView
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_gravity="start|center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/group_short_game"/>
+                        <Button
+                            android:layout_gravity="center"
+                            android:drawableTint="@color/button_text"
+                            android:id="@+id/radio_short_game"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:background="@drawable/capture_selector"
+                            android:textColor="@color/color_blue"
+                            android:button="@android:color/transparent"
+                            android:fontFamily="@font/opensans_bold"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:text="Short Game"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_10ssp"
+                            app:backgroundTint="@null" />
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_gravity="end|center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="Soon"
+                            android:fontFamily="@font/opensans_bold"
+                            android:textColor="@color/color_blue"
+                            android:src="@drawable/group_new_lock"/>
+                    </FrameLayout>
+                    <FrameLayout
+                        android:id="@+id/frame_putting"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/capture_selector"
+                        >
+                        <ImageView
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_gravity="start|center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/group_putting"/>
+                        <Button
+                            android:layout_gravity="center"
+                            android:drawableTint="@color/button_text"
+                            android:id="@+id/radio_putting"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:background="@drawable/capture_selector"
+                            android:textColor="@color/color_blue"
+                            android:button="@android:color/transparent"
+                            android:fontFamily="@font/opensans_bold"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:text="Putting"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_10ssp"
+                            app:backgroundTint="@null" />
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_gravity="end|center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="Soon"
+                            android:fontFamily="@font/opensans_bold"
+                            android:textColor="@color/color_blue"
+                            android:src="@drawable/group_new_lock"/>
+                    </FrameLayout>
+                    <FrameLayout
+                        android:id="@+id/frame_bunker"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/capture_selector"
+                        >
+                        <ImageView
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_gravity="start|center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/group_bunker"/>
+                        <Button
+                            android:id="@+id/btn_bunker"
+                            android:layout_gravity="center"
+                            android:drawableTint="@color/button_text"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:background="@drawable/capture_selector"
+                            android:textColor="@color/color_blue"
+                            android:button="@android:color/transparent"
+                            android:fontFamily="@font/opensans_bold"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:text="Bunker"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_10ssp"
+                            app:backgroundTint="@null" />
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_gravity="end|center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="Soon"
+                            android:fontFamily="@font/opensans_bold"
+                            android:textColor="@color/color_blue"
+                            android:src="@drawable/group_new_lock"/>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:visibility="gone"
+            android:id="@+id/card_striker"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_alignParentBottom="true"
+            app:strokeColor="@color/color_blue"
+            app:strokeWidth="@dimen/_1sdp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_13sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/lin_main"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:padding="@dimen/_5sdp"
+
+                >
+
+                <FrameLayout
+                    android:id="@+id/main_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="5"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_striker_back"
+                            android:layout_weight="0.2"
+                            android:layout_width="0dp"
+                            android:layout_gravity="top"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/group_back"/>
+                        <FrameLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/iv_striker"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/elipse_avatar"/>
+
+                        </FrameLayout>
+                        <LinearLayout
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_weight="2.8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="start"
+                                android:maxLines="1"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textSize="@dimen/_12ssp"
+                                android:gravity="start"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/opensans_bold"
+                                android:text="Wylder Gian"
+                                />
+                            <TextView
+                                android:id="@+id/tv_type"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="start"
+                                android:textSize="@dimen/_14ssp"
+                                android:gravity="start"
+                                android:fontFamily="@font/opensans_medium"
+                                android:text="Right Handed"
+                                />
+                        </LinearLayout>
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/label_striker"/>
+
+
+
+
+                    </LinearLayout>
+                </FrameLayout>
+
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</layout>

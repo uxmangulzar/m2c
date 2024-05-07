@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    android:background="@color/background_color"
+    tools:context=".view.activity.ActionPreviewActivity">
+    <LinearLayout
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="start"
+            android:fontFamily="@font/opensans_bold"
+            android:textSize="@dimen/_13ssp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:textColor="@color/black"
+            android:text="@string/action_plan"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/action_plan_rect">
+        <TextView
+            android:padding="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center|bottom"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/opensans_medium"
+            android:text="@string/area_to_work"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="start"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/opensans_medium"
+
+            android:textColor="@color/black"
+            android:text="@string/working_on"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <TextView
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/opensans_bold"
+        android:textColor="@color/black"
+        android:text="@string/best_area"
+        />
+    <ImageView
+        android:layout_gravity="center"
+        android:src="@drawable/ic_golf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/opensans_bold"
+        android:textColor="@color/black"
+        android:text="Hip Turn at impact"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:textSize="@dimen/_11ssp"
+        android:fontFamily="@font/opensans_medium"
+        android:textColor="@color/black"
+        android:text="This area is closest to the ideal golf swing.Good work!"
+        />
+    <LinearLayout
+        android:id="@+id/li_gocam"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2.1">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_10ssp"
+                android:text="You"
+                android:textColor="@color/black"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="center"/>
+            <ImageView
+                android:scaleType="fitXY"
+                android:src="@drawable/down_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp"/>
+
+        </LinearLayout>
+        <Space
+            android:layout_weight="0.1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/opensans_bold"
+                android:textSize="@dimen/_10ssp"
+                android:text="Actual"
+                android:gravity="center"/>
+            <ImageView
+                android:scaleType="fitXY"
+                android:src="@drawable/face_on_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_watch"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_13ssp"
+        android:background="@drawable/ic_rectangle_button"
+        android:fontFamily="@font/opensans_medium"
+        android:text="Watch Recording"/>
+    <LinearLayout
+        android:layout_marginTop="@dimen/_10sdp"
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/blue_rect"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:fontFamily="@font/opensans_bold"
+            android:textSize="@dimen/_13ssp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:textColor="@color/purple_500"
+            android:text="@string/swing_again"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

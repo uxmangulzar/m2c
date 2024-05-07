@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10sdp">
+
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff"
+            android:paddingLeft="@dimen/_30sdp"
+            android:paddingRight="@dimen/_30sdp"
+            android:paddingBottom="@dimen/_20sdp"
+            android:paddingTop="@dimen/_10sdp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_cross"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="end"
+                android:scaleType="fitCenter"
+
+                android:src="@drawable/ic_baseline_close_24" />
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/opensans_bold"
+                android:textColor="@color/black"
+                android:text="Server Error!"
+                />
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:textSize="@dimen/_10ssp"
+                android:fontFamily="@font/opensans_medium"
+                android:text="The operation could not be completed.Please try again"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:enabled="true"
+                android:id="@+id/btn_return"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_rectangle_button"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Return to recording"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_10ssp" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

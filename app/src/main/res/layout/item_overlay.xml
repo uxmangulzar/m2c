@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_95sdp"
+    android:layout_height="@dimen/_60sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/_3sdp"
+
+    >
+
+
+    <ImageView
+
+        android:id="@+id/iv_indicator"
+        app:tint="@color/color_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:src="@drawable/ic_line_overlay" />
+
+    <LinearLayout
+        android:layout_marginStart="@dimen/_4sdp"
+        android:id="@+id/lin_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/container_overlay_blur"
+        android:orientation="vertical"
+        android:weightSum="2.6"
+        >
+
+        <TextView
+            android:layout_weight="0.6"
+            android:layout_height="0dp"
+
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/opensans_bold"
+            android:gravity="bottom|center"
+            android:orientation="vertical"
+            android:text="Start to Impact"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_6ssp" />
+        <LinearLayout
+            android:layout_weight="1.2"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:gravity="center">
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/opensans_medium"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:text=""
+                    android:textColor="@color/color_blue"
+                    android:textSize="@dimen/_22ssp" />
+                <ImageView
+                    android:id="@+id/iv_lock"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:src="@drawable/group_overlay_lock"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"/>
+            </FrameLayout>
+
+            <TextView
+
+                android:id="@+id/tv_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center|start"
+                android:orientation="vertical"
+                android:text=" s"
+                android:textColor="@color/darker_gray"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_range"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.8"
+            android:layout_height="0dp"
+            android:fontFamily="@font/opensans_regular"
+            android:layout_gravity="center|top"
+            android:orientation="vertical"
+            android:text="Corridor     1-1.5s"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8ssp" />
+    </LinearLayout>
+
+</FrameLayout>
+

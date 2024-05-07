@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="@dimen/_160sdp"
+        app:cardCornerRadius="@dimen/_10sdp">
+
+<LinearLayout android:orientation="vertical"
+    android:layout_width="@dimen/_270sdp"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:padding="@dimen/_10sdp">
+
+    <ImageView
+        android:id="@+id/iv_cross"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_gravity="end"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_baseline_close_24" />
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/opensans_medium"
+
+        android:text="Are you sure you want to delete\nthis recording?"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:hint="@string/first_name"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintTextColor="@android:color/darker_gray">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_no"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/et_border_selector"
+                android:textSize="@dimen/_13ssp"
+                android:text="No"
+                android:gravity="center"
+                android:fontFamily="@font/opensans_regular"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tv_yes"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_rectangle_button"
+            android:fontFamily="@font/opensans_bold"
+            android:text="Yes"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_13ssp" />
+    </LinearLayout>
+
+
+</LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

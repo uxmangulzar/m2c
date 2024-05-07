@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fenris.motion2coach">
+
+    <uses-sdk tools:overrideLibrary="androidx.camera.camera2, androidx.camera.core,androidx.camera.view, androidx.camera.lifecycle" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Motion"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".view.activity.TestActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".view.activity.contactus.ContactUsActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".view.activity.CamPreviewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.StrikerHeighWeightActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.invite.InvitationSentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.account.DeleteAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.strikers.AllStrikersActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.coaches.AllCoachesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.invite.InvitationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.forgotpass.ForgotPasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.NewCameraActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.report.ReportTwoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.address.SelectCitiesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.report.ReportOneActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.settings.PrivacySettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.invite.GuestInvitationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.settings.RecordSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.signup.CongratulationsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.loading.LoadingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.DemoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.fenris.motion2coach.services.FileUploadService" />
+
+        <activity
+            android:name=".view.activity.report.PdfViewerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.profile.EditProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.profile.ProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.WeightActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.signup.ProfilePhotoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.settings.GeneralSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.camera.CaptureVideoActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".view.activity.address.SelectCountryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.dashboard.CaptureOptionsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.camera.CaptureImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.LiveImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.dashboard.DashboardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.report.SegmentDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.KinematicDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.SwingDetailsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.player.PlayVideoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.ActionPreviewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.signup.OtpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.signup.AccountInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.signup.AddressInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.signup.ProfileInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.terms.TermsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.history.SessionsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.login.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name="com.fenris.motion2coach.services.TcpClientService"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

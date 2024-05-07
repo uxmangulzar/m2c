@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.fenris.motion2coach.viewmodel.AuthViewModel" />
+
+        <variable
+            name="handler"
+            type="com.fenris.motion2coach.interfaces.SignupValidationHandler" />
+    </data>
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".view.activity.terms.TermsActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                        app:tint="@color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/opensans_bold"
+                        android:gravity="start|center"
+                        android:orientation="vertical"
+                        android:text="@string/back"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15ssp" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/progress_bar_four"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:text="Choose Player Type?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="Motion2Coach welcomes everyone!"
+                android:textSize="@dimen/_13ssp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                >
+                <RadioButton
+                    android:id="@+id/radio_amateur"
+                    android:checked="true"
+                    android:button="@android:color/transparent"
+                    app:backgroundTint="@null"
+                    android:layout_width="match_parent"
+                    android:focusableInTouchMode="true"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+
+                    android:background="@drawable/gender_selector"
+                    android:fontFamily="@font/opensans_bold"
+                    android:gravity="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:text="@string/amateur"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_13ssp" />
+                <RadioButton
+                    android:id="@+id/radio_coach"
+                    android:button="@android:color/transparent"
+                    app:backgroundTint="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/gender_selector"
+                    android:fontFamily="@font/opensans_bold"
+                    android:gravity="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:text="@string/coach"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_13ssp" />
+                <RadioButton
+                    android:id="@+id/radio_professional"
+                    android:button="@android:color/transparent"
+                    app:backgroundTint="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/gender_selector"
+                    android:fontFamily="@font/opensans_bold"
+                    android:gravity="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:text="@string/professional"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_13ssp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/ic_rectangle_button"
+            android:fontFamily="@font/opensans_bold"
+
+            android:text="@string/continue_txt"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_13ssp" />
+
+    </RelativeLayout>
+</layout>

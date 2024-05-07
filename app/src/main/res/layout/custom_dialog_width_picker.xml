@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:strokeColor="@color/color_blue"
+        app:strokeWidth="1dp"
+
+        >
+
+<LinearLayout android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/color_blue"
+    android:gravity="end"
+    android:padding="@dimen/_2sdp">
+    <ImageView
+        android:id="@+id/iv_three"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:orientation="vertical"
+        android:src="@drawable/width_three"
+        />
+
+    <ImageView
+        android:id="@+id/iv_second"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:orientation="vertical"
+        android:src="@drawable/width_two"
+        />
+    <ImageView
+        android:id="@+id/iv_first"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:orientation="vertical"
+        android:src="@drawable/width_one"
+        />
+
+
+</LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

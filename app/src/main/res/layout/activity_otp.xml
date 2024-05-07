@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.fenris.motion2coach.viewmodel.AuthViewModel" />
+
+        <variable
+            name="handler"
+            type="com.fenris.motion2coach.interfaces.SignupValidationHandler" />
+    </data>
+<ScrollView
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".view.activity.terms.TermsActivity">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal"
+                android:background="@color/color_blue"
+                >
+
+                <ImageView
+                    android:onClick="onBackPressed"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:layout_width="wrap_content"
+                    app:tint="@color/white"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:textSize="@dimen/_15ssp"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textColor="@color/white"
+                    android:text="@string/account_information"
+                    />
+
+
+            </LinearLayout>
+            <ImageView
+                android:layout_gravity="start|bottom"
+                android:src="@drawable/step_three_line"
+                android:layout_width="wrap_content"
+                app:tint="@color/white"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/otp_at"
+                android:padding="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/opensans_medium"
+                android:textColor="@color/black"
+                android:text="@string/enter_the_5_digit_code_sent_to_you_at_n30_5"
+                />
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:orientation="horizontal"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et1"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/otp_rect"
+                    android:fontFamily="@font/opensans_regular"
+                    android:gravity="center"
+                    android:hint="@string/hint_slash"
+                    android:text="@={viewModel.noOne}"
+
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="1"
+                    android:textSize="@dimen/_13ssp" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et2"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/otp_rect"
+                    android:textSize="@dimen/_13ssp"
+                    android:gravity="center"
+                    android:text="@={viewModel.noTwo}"
+
+                    android:inputType="text"
+                    android:maxLength="1"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/hint_slash"
+                    android:fontFamily="@font/opensans_regular"
+                    />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:id="@+id/et3"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/otp_rect"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="@={viewModel.noThree}"
+
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:maxLength="1"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/hint_slash"
+                    android:fontFamily="@font/opensans_regular"
+                    />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:id="@+id/et4"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/otp_rect"
+                    android:textSize="@dimen/_13ssp"
+                    android:text="@={viewModel.noFour}"
+
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="1"
+                    android:hint="@string/hint_slash"
+                    android:fontFamily="@font/opensans_regular"
+                    />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:id="@+id/et5"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/otp_rect"
+                    android:textSize="@dimen/_13ssp"
+                    android:gravity="center"
+                    android:text="@={viewModel.noFive}"
+
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="1"
+                    android:hint="@string/hint_slash"
+                    android:fontFamily="@font/opensans_regular"
+                    />
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:textAllCaps="false"
+                android:enabled="false"
+                android:textSize="@dimen/_13ssp"
+                android:onClick="@{()->handler.onValidationClicked()}"
+                android:background="@drawable/ic_rectangle_button"
+                android:fontFamily="@font/opensans_bold"
+                android:text="@string/next"/>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_resent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/opensans_bold"
+                android:textColor="@color/purple_500"
+                android:text="Resend Confirmation Code"
+                />
+            <TextView
+                android:id="@+id/tv_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/opensans_light"
+                android:text="Your OTP will expire in 05:00"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
+</layout>

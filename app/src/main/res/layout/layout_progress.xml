@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar
+        android:id="@+id/mProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </ProgressBar>
+    <!--add other customize layout components you want-->
+</LinearLayout>

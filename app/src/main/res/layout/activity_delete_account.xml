@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/logo" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="onBackPressed"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+                <TextView
+                    android:id="@+id/tv_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/opensans_bold"
+                    android:gravity="center|start"
+                    android:orientation="vertical"
+                    android:text="Delete Account"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15ssp" />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_details_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:fontFamily="@font/opensans_medium"
+                android:orientation="vertical"
+                android:text="Please enter your password in order to delete your account"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_9ssp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_input_first"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_65sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:hint="@string/enter_password"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconTint="@android:color/darker_gray"
+                app:passwordToggleTint="@android:color/darker_gray"
+                app:endIconMode="password_toggle"
+                app:endIconDrawable="@drawable/custom_password_eye"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/ic_rectangle_edit_txt"
+                    android:cursorVisible="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/opensans_regular"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/_13ssp"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:background="@drawable/ic_rectangle_button"
+            android:fontFamily="@font/opensans_bold"
+            android:text="Delete Account"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_13ssp" />
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tv_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Version 1.0.2"
+            />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.fenris.motion2coach.viewmodel.AuthViewModel" />
+
+        <variable
+            name="handler"
+            type="com.fenris.motion2coach.interfaces.LoginValidationHandler" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical"
+
+            tools:context=".view.activity.LandingActivity">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/logo" />
+                <ImageView
+                    android:onClick="onHomeClick"
+                    android:layout_gravity="top"
+                    android:id="@+id/cross"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:src="@drawable/ic_baseline_home_24" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:onClick="onBackPressed"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textSize="@dimen/_15ssp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:text="Capture(Segment Dimensions)"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:fontFamily="@font/opensans_bold"
+                android:textSize="@dimen/_15ssp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:text="Segment Dimensions"
+                android:layout_marginBottom="@dimen/_10sdp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_410sdp">
+                <ImageView
+                    android:id="@+id/iv_visualize"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

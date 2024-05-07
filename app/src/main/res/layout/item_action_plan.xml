@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:orientation="horizontal"
+    android:weightSum="5">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/circle_action_item" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/opensans_bold"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_weight="3.2"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="@font/opensans_bold"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:text="Hip Turn"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="@font/opensans_medium"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:text="at Top Backswing"
+            android:textSize="@dimen/_10ssp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.8"
+        android:src="@drawable/round_arrow" />
+
+
+</LinearLayout>
+
